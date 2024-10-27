@@ -21,8 +21,9 @@ OPENAI_API_MODEL: "llama3.1:70b"
 ### 二、使用
 #### 2.1 添加至环境变量
 ```bash
-mkdir ~/.local/bin
-cp copilot.py ~/.local/bin/copilot
+# 执行前，先激活需要使用的python3环境
+cd terminal-copilot
+cp copilot.py `dirname $(which python3)`/copilot
 ```
 #### 2.2 使用
 执行如下  
