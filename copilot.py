@@ -87,6 +87,8 @@ def stream_chat(api_url, model, api_key, user_query):
                 if content == "[DONE]":
                     if len(display_message) > 0:
                         display_message, in_code_block = display(display_message, in_code_block)
+                    else:
+                        print()
                     break
 
                 # 解析JSON并处理内容
@@ -132,13 +134,15 @@ def main():
     api_url = "https://api.openai.com/v1/chat/completions"
     model = "gpt-4o-mini-0718"
 
+    config_path = os.path.join(os.path.expanduser("~"), ".terminal-copilot.yaml")
     # 读取yaml配置文件
-    with open("config.yaml", "r") as f:
-        config = yaml.safe_load(f)
-        if config:
-            api_key = config.get("OPENAI_API_KEY", api_key)
-            api_url = config.get("OPENAI_API_URL", api_url)
-            model = config.get("OPENAI_API_MODEL", model)
+    if os.path.exists(config_path):
+        with open(config_path, "r") as f:
+            config = yaml.safe_load(f)
+            if config:
+                api_key = config.get("OPENAI_API_KEY", api_key)
+                api_url = config.get("OPENAI_API_URL", api_url)
+                model = config.get("OPENAI_API_MODEL", model)
 
     api_key = os.getenv("OPENAI_API_KEY", api_key)
     api_url = os.getenv("OPENAI_API_URL", api_url)
