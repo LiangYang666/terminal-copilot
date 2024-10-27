@@ -20,11 +20,15 @@ OPENAI_API_MODEL: "llama3.1:70b"
 
 ### 二、使用
 #### 2.1 添加至环境变量
+```bash
 mkdir ~/.local/bin
 cp copilot.py ~/.local/bin/copilot
+```
 #### 2.2 使用
-执行如下
+执行如下  
+```bash
 copilot find命令怎么使用
+```
 
 
 ## 问题记录
