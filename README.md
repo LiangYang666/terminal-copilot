@@ -11,7 +11,7 @@ export OPENAI_API_MODEL="gpt-4o"
 ```
 注意，设置环境变量只会该终端生效，可将这几条命令添加到~/.bashrc文件中
 2. 设置配置
-例如将如下配置写入 `~/.terminal-copilot.yaml` 中，案例为使用本地ollama
+例如将如下配置写入`vi ~/.terminal-copilot.yaml` 中，案例为使用本地ollama
 ```bash
 OPENAI_API_URL: "http://localhost:11434/v1/chat/completions"
 OPENAI_API_KEY: "sk-xxx"
