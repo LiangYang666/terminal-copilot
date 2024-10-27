@@ -28,8 +28,10 @@ cp copilot.py `dirname $(which python3)`/copilot
 #### 2.2 使用
 执行如下  
 ```bash
-copilot find命令怎么使用
+copilot 查找某目录下所有文件名包含test的文件
 ```
+![](https://github.com/user-attachments/assets/c799359d-4f1a-46d3-90e2-15b66f3a1486)
+
 
 
 ## 问题记录
