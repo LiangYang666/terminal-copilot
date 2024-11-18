@@ -2,6 +2,7 @@
 终端助手
 
 
+## Star the [Repository](https://github.com/LiangYang666/terminal-copilot)✨  
 ### 一、参数设置：
 1. 直接设置环境变量
 ```bash
